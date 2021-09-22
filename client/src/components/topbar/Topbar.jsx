@@ -3,6 +3,7 @@ import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import appName from "../../branding"
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
@@ -11,7 +12,7 @@ export default function Topbar() {
     <div className="topbarContainer">
       <div className="topbarLeft">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Lamasocial</span>
+          <span className="logo">{appName}</span>
         </Link>
       </div>
       <div className="topbarCenter">
